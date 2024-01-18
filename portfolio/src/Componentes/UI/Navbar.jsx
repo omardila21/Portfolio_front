@@ -47,9 +47,6 @@ const NavigationMenu = () => {
         <li className={`tex-nav ${activeSection === 'PROJECTS' ? 'active' : ''}`} id="projectsSection">
           PROJECTS
         </li>
-        <li className={`tex-nav ${activeSection === 'CONTACT ME' ? 'active' : ''}`} id="contactMeSection">
-          CONTACT ME
-        </li>
       </ul>
     </nav>
   );
@@ -58,7 +55,8 @@ const NavigationMenu = () => {
 const MainName = () => {
   const [text, setText] = useState('');
   const fullText = "DEV OMAR ARDILA";
-  const speed = 50; // Velocidad de escritura en milisegundos
+  const speed = 200
+  ; // Velocidad de escritura en milisegundos
 
   useEffect(() => {
     let currentIndex = 0;
@@ -89,5 +87,22 @@ const MainName = () => {
   );
 };
 
-export  {NavigationMenu, MainName};
+const MainPresentacion = () =>{
+  return (
+    <section id= "aboutMeSection">
+    <p>I am a geological engineer who embarked on a journey in the IT industry as a developer,</p>
+    <p> possessing the ability to handle various frameworks and libraries. Among the technologies I manage are:</p>
+    <div className="ima-contenedor">
+        <th><img src="html5.png" alt="HTML" /></th>
+        <th><img src="CSS.png" alt="CSS" /></th>
+        <th><img src="python.png" alt="Python" /></th>
+        <th><img src="js.png" alt="Javascript" /></th>
+        <th><img src="JAVA.png" alt="Java" /></th>
+      </div>
+    </section>
+  )
+
+}
+
+export  {NavigationMenu, MainName, MainPresentacion};
   
