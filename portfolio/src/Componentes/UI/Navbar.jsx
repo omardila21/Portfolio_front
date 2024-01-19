@@ -8,27 +8,22 @@ const NavigationMenu = () => {
     const handleScroll = () => {
       const aboutMeSection = document.getElementById('aboutMeSection');
       const projectsSection = document.getElementById('projectsSection');
-      const contactMeSection = document.getElementById('contactMeSection');
 
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       if (
         aboutMeSection &&
+        projectsSection &&
         scrollPosition >= aboutMeSection.offsetTop &&
         scrollPosition < projectsSection.offsetTop
       ) {
         setActiveSection('ABOUT ME');
       } else if (
         projectsSection &&
-        scrollPosition >= projectsSection.offsetTop &&
-        scrollPosition < contactMeSection.offsetTop
+        scrollPosition >= projectsSection.offsetTop 
       ) {
         setActiveSection('PROJECTS');
-      } else if (contactMeSection && scrollPosition >= contactMeSection.offsetTop) {
-        setActiveSection('CONTACT ME');
-      } else {
-        setActiveSection('');
-      }
+      }  
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -47,6 +42,7 @@ const NavigationMenu = () => {
         <li className={`tex-nav ${activeSection === 'PROJECTS' ? 'active' : ''}`} id="projectsSection">
           PROJECTS
         </li>
+
       </ul>
     </nav>
   );
@@ -55,8 +51,7 @@ const NavigationMenu = () => {
 const MainName = () => {
   const [text, setText] = useState('');
   const fullText = "DEV OMAR ARDILA";
-  const speed = 200
-  ; // Velocidad de escritura en milisegundos
+  const speed = 50; // Velocidad de escritura en milisegundos
 
   useEffect(() => {
     let currentIndex = 0;

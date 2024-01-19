@@ -12,8 +12,8 @@ function App() {
     <>
     <div className="App-header">
     <NavigationMenu/>
-    <MainName/>
     </div>
+    <MainName/>
     <MainPresentacion/>
     <Proyectos />
     <Footer/>
