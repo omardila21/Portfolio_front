@@ -1,6 +1,7 @@
 import  React from "react"
 
-const ProjectCard = ({ title, description, url }) => {
+
+const ProjectCard = ({ imagen, title, tecnology, description, url }) => {
   const [isHovered, setHovered] = React.useState(false);
 
   return (
@@ -13,14 +14,13 @@ const ProjectCard = ({ title, description, url }) => {
       onMouseLeave={() => setHovered(false)}
     >
       <div>
+        <div className="project-card img">{imagen}</div>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <h3>{description}</h3>
+        <h4>{tecnology}</h4>
+        <h4>{url}</h4>
       </div>
-      <div style={{ textAlign: "right" }}>
-        <span style={{ fontSize: "12px" }}>
-          Haz clic para más información
-        </span>
-      </div>
+  
     </a>
     
 

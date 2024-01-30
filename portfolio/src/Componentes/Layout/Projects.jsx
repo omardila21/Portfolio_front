@@ -1,18 +1,20 @@
 import React from 'react';
 import ProjectCard from '../UI/cards';
+import "../../App.css";
+import html5Image from '../../Pictures/html5.png'
 
 
 const projects = [
   
   {
-    
-    title: 'Proyecto 1',
-    tecnology:'proyecto 1',
+    imagen: <img src={html5Image} alt="HTML"></img>,
+    title: 'Top Rated Reviews',
+    tecnology:'Javascript',
     desarrollo: 'Front-end ó Back-end',
     status:'En proceso ó Finalizado',
     description: 'Descripción del Proyecto 1.',
     image: 'URL de la imagen 1',
-    URL:'https://www.youtube.com/results?search_query=animacion+de+letras+en+react'
+    url:'https://www.youtube.com/results?search_query=animacion+de+letras+en+react'
   }
   
 ];

@@ -119,7 +119,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   text-align: left;
-  font-size: 13vh; /* Cambiado de 15vh a 3vh */
+  font-size: 20vh; /* Cambiado de 15vh a 3vh */
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -145,20 +145,24 @@ body {
   .project-card {
     text-decoration: none;
     color: inherit;
-    width: 100px;
-    height: 100px;
-    background: #3498db;
+    width: 300px;
+    height: 300px;
+    background: #00bcd4;
     border-radius: 10px;
-    padding: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
     cursor: pointer;
     transition: transform 0.15s ease-in-out;
     font-size: auto;
-    text-overflow: ellipsis;
-    overflow: scroll;
-  }
+    overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+}
+
+.project-card img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    max-height: 100%; /* Ajusta el tamaño máximo de la imagen al alto del contenedor */
+}
   
   .project-card:hover,
   .project-card.hovered {
@@ -168,4 +172,7 @@ p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 30px;
   text-align: center;
+}
+.h3 {
+  text-align: justify;
 }

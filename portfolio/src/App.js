@@ -17,7 +17,6 @@ function App() {
     <MainPresentacion/>
     <section id="projectsSection"><h2>Projects</h2></section>
     <Proyectos />
-  
     <Footer/>
     </>
   ) 
