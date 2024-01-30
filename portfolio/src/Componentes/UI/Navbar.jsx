@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import "../../App.css";
+import html5Image from '../../Pictures/html5.png'
+import cssImage from '../../Pictures/css.png'
+import javaImage from '../../Pictures/java.png'
+import jsImage from '../../Pictures/js.png'
+import pythonImage from '../../Pictures/python.png'
 
 const NavigationMenu = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -35,23 +40,22 @@ const NavigationMenu = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <ul className="navbar-nav" style={{ display: 'flex', flexDirection: 'row', listStyleType: 'none', padding: 0 }}>
-        <li className={`tex-nav ${activeSection === 'ABOUT ME' ? 'active' : ''}`} id="aboutMeSection">
-          ABOUT ME
-        </li>
-        <li className={`tex-nav ${activeSection === 'PROJECTS' ? 'active' : ''}`} id="projectsSection">
-          PROJECTS
-        </li>
-
-      </ul>
-    </nav>
+    <ul className="navbar-nav" style={{ display: 'flex', flexDirection: 'row', listStyleType: 'none',margin: 0 ,  padding: 0 }}>
+      <li className={`tex-nav ${activeSection === 'ABOUT ME' ? 'active' : ''}`} id="aboutMeSection">
+        ABOUT ME
+      </li>
+      <li className={`tex-nav ${activeSection === 'PROJECTS' ? 'active' : ''}`} id="projectsSection">
+        PROJECTS
+      </li>
+    </ul>
+  </nav>
   );
 };
 
 const MainName = () => {
   const [text, setText] = useState('');
-  const fullText = "DEV OMAR ARDILA";
-  const speed = 50; // Velocidad de escritura en milisegundos
+  const fullText = 'DEV OMAR ARDILA';
+  const speed = 500; // Velocidad de escritura en milisegundos
 
   useEffect(() => {
     let currentIndex = 0;
@@ -59,7 +63,7 @@ const MainName = () => {
 
     const typeEffect = () => {
       if (currentIndex < fullText.length) {
-        setText((prevText) => prevText + fullText[currentIndex]);
+        setText(fullText.slice(0, currentIndex + 1));
         currentIndex++;
       } else {
         clearInterval(intervalId);
@@ -70,13 +74,16 @@ const MainName = () => {
     intervalId = setInterval(typeEffect, speed);
 
     return () => {
-      // Limpia el intervalo si el componente se desmonta antes de completar la escritura
-      clearInterval(intervalId);
-    };
+      // Limpia el intervalo solo si la escritura no está completa
+      
+        clearInterval(intervalId);
+      
+    }  
+    
   }, [fullText, speed]);
 
   return (
-    <div>
+    <div className='tex-pre'>
       <p>{text}</p>
     </div>
   );
@@ -85,14 +92,21 @@ const MainName = () => {
 const MainPresentacion = () =>{
   return (
     <section id= "aboutMeSection">
+      <h2>ABOUT ME</h2>
     <p>I am a geological engineer who embarked on a journey in the IT industry as a developer,</p>
     <p> possessing the ability to handle various frameworks and libraries. Among the technologies I manage are:</p>
-    <div className="ima-contenedor">
-        <th><img src="html5.png" alt="HTML" /></th>
-        <th><img src="CSS.png" alt="CSS" /></th>
-        <th><img src="python.png" alt="Python" /></th>
-        <th><img src="js.png" alt="Javascript" /></th>
-        <th><img src="JAVA.png" alt="Java" /></th>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <table>
+        <thead>
+          <tr>
+            <th><img src={html5Image} alt="HTML" /></th>
+            <th><img src={cssImage} alt="CSS" /></th>
+            <th><img src={pythonImage} alt="Python" /></th>
+            <th><img src={jsImage} alt="Javascript" /></th>
+            <th><img src={javaImage} alt="Java" /></th>
+          </tr>
+        </thead>
+      </table>    
       </div>
     </section>
   )

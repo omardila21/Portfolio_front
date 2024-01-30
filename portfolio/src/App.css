@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -13,37 +18,56 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  width:130%;
-  height: 45vh; /* Ajusta según tus necesidades */
-  margin: 0;
+  background-color: #414142;
+  min-height: 1vh;
+  width: 100%; /* Cambiado de 130% a 100% */
+  height: 45vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(1em + 2vmin);
   padding: 0;
   margin: 0;
   position: relative;
   right: 0;
   top: 0;
- 
 }
-.navbar-nav { 
+.navbar {
   position: fixed;
-  right: 5%;
-  top:0;
-  width:max-content;
-  background-color: #161616; 
+  right: 2%;
+  top: 2%;
+  width: calc(17% - 4%);
+  height: 3%; /* Ajusta según tus necesidades */
+  background-color: #161616;
+  border-radius: 30px;
+}
+.navbar-nav {
+  display: flex;
+  margin: 0;
   padding: 0;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-nav li {
+  margin-right: 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-nav li.active {
+  color: #00bcd4;
 }
 
 .App-footer {
   position: absolute;
-  width: 125%;
-  background-color: #282c34;
+  width: 100%;
+  height: 15%;
+  background-color: #414142;
   padding: 0; /* Ajusta según tus necesidades */
-  margin-top: 2em; /* Ajusta según tus necesidades */
+  margin-top: 4em; /* Ajusta según tus necesidades */
+  bottom: 0;  
 }
 
 @media (max-width: 768px) {
@@ -84,17 +108,25 @@ body {
   float: left;
 
 }
-.tex {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-  color: white
-}
 
 .tex-nav {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
   color: white;
-  text-align: left ;
-  margin-right: 10px;
+  text-align: center;
   
+}
+.tex-pre {
+  background-color: #414142;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  text-align: left;
+  font-size: 13vh; /* Cambiado de 15vh a 3vh */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100%;
+
 }
 .container {
   display: flex;
@@ -102,11 +134,13 @@ body {
   align-items: center; /* O ajusta según tus necesidades */
 }
 .ima-contenedor {
+  position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
   height: 40px;
+  margin: 0 auto;
   float: left;
   }
   .project-card {
@@ -131,3 +165,8 @@ body {
   .project-card.hovered {
     transform: scale(1.1);
   } 
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
