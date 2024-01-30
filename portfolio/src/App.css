@@ -61,12 +61,11 @@ body {
 }
 
 .App-footer {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 15%;
+  height: 10%;
   background-color: #414142;
   padding: 0; /* Ajusta según tus necesidades */
-  margin-top: 4em; /* Ajusta según tus necesidades */
   bottom: 0;  
 }
 

@@ -15,6 +15,7 @@ function App() {
     <MainName/>
     </div>
     <MainPresentacion/>
+    <section id="projectsSection"><h2>Projects</h2></section>
     <Proyectos />
   
     <Footer/>
