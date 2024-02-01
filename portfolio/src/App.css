@@ -18,6 +18,7 @@ body {
 }
 
 .App-header {
+  background-image: url('C:\Users\Home1\OneDrive\Escritorio\Omar\Programación\portfolio\front\Portfolio_front\portfolio\src\Pictures\Omar-logos_white.png');
   background-color: #414142;
   min-height: 1vh;
   width: 100%; /* Cambiado de 130% a 100% */
@@ -30,12 +31,15 @@ body {
   position: relative;
   right: 0;
   top: 0;
+  background-size: 45%; /* Ajusta según sea necesario */
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .navbar {
   position: fixed;
   right: 2%;
   top: 2%;
-  width: calc(17% - 4%);
+  width: calc(14% - 4%);
   height: 3%; /* Ajusta según tus necesidades */
   background-color: #161616;
   border-radius: 30px;
@@ -59,14 +63,25 @@ body {
 .navbar-nav li.active {
   color: #00bcd4;
 }
-
+.tex-nav {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  color: white;
+  padding: 0;
+  
+}
 .App-footer {
   position: relative;
   width: 100%;
-  height: 10%;
+  height: 35%;
   background-color: #414142;
   padding: 0; /* Ajusta según tus necesidades */
   bottom: 0;  
+}
+.tex {
+  text-align: right;
+  right: 0;
+  color: white;
+  float: right;
 }
 
 @media (max-width: 768px) {
@@ -91,28 +106,28 @@ body {
   background-image: url(./Pictures/git.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
   width: 50px;
   height: 40px;
-  float: left;
+  float: right;
 
 }
 .Linkedin {
   background-image: url(./Pictures/linkedin.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
   width: 50px;
   height: 40px;
-  float: left;
+  float: right;
 
 }
+.cv {
+  background-image: url(./Pictures/cv.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 40px;
+  float: right;
 
-.tex-nav {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-  color: white;
-  text-align: center;
-  
 }
 .tex-pre {
   background-color: #414142;
@@ -137,16 +152,16 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 50px;
-  height: 40px;
-  margin: 0 auto;
+  width: 30px;
+  height: 30px;
   float: left;
   }
   .project-card {
+    margin-left: 0.5%;
     text-decoration: none;
     color: inherit;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: #00bcd4;
     border-radius: 10px;
     display: flex;
@@ -157,22 +172,36 @@ body {
     transition: transform 0.15s ease-in-out;
     font-size: auto;
     overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+    padding: 10px;
 }
 
 .project-card img {
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
-    max-height: 100%; /* Ajusta el tamaño máximo de la imagen al alto del contenedor */
+  max-width: 50%; /* Make sure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block;
+  margin-bottom: 1px; 
+}
+.project-card h3 {
+  margin-top: 1px; /* Add margin above the title */
 }
   
-  .project-card:hover,
   .project-card.hovered {
     transform: scale(1.1);
   } 
 p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font: arial;
   font-size: 30px;
   text-align: center;
 }
 .h3 {
-  text-align: justify;
+  text-align: center;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-95%);
+  }
 }

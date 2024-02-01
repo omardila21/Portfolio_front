@@ -1,7 +1,8 @@
 import "./App.css";
 import Proyectos from "./Componentes/Layout/Projects";
 import Footer from "./Componentes/UI/Footer";
-import {NavigationMenu, MainName, MainPresentacion} from "./Componentes/UI/Navbar"
+import {NavigationMenu, MainPresentacion} from "./Componentes/UI/Navbar"
+
 
 
 
@@ -12,11 +13,17 @@ function App() {
     <>
     <div className="App-header">
     <NavigationMenu/>
-    <MainName/>
     </div>
+    <p>&nbsp;</p>
+    <section id="aboutMeSection">
     <MainPresentacion/>
-    <section id="projectsSection"><h2>Projects</h2></section>
+    </section>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <section id="projectsSection"><h2 style={{ fontSize: '35px', textAlign: 'justify', marginLeft: '3%' }}>Projects</h2></section>
+    <p>&nbsp;</p>
     <Proyectos />
+    <p>&nbsp;</p>
     <Footer/>
     </>
   ) 

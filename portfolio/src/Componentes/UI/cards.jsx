@@ -1,7 +1,9 @@
-import  React from "react"
+import  React from "react";
+import "../../App.css";
 
 
-const ProjectCard = ({ imagen, title, tecnology, description, url }) => {
+
+const ProjectCard = ({ imagen, title, description, url }) => {
   const [isHovered, setHovered] = React.useState(false);
 
   return (
@@ -17,7 +19,6 @@ const ProjectCard = ({ imagen, title, tecnology, description, url }) => {
         <div className="project-card img">{imagen}</div>
         <h3>{title}</h3>
         <h3>{description}</h3>
-        <h4>{tecnology}</h4>
         <h4>{url}</h4>
       </div>
   
