@@ -41,15 +41,16 @@ body {
   top: 2%;
   width: calc(14% - 4%);
   height: 3%; /* Ajusta según tus necesidades */
-  background-color: #161616;
+  background-color: #aeaeae;
   border-radius: 30px;
 }
 .navbar-nav {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
+  color: black;
 }
 
 .navbar-nav li {
@@ -69,6 +70,11 @@ body {
   padding: 0;
   
 }
+.tex-nav.active {
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 5px;
+}
 .App-footer {
   position: relative;
   width: 100%;
@@ -76,12 +82,13 @@ body {
   background-color: #414142;
   padding: 0; /* Ajusta según tus necesidades */
   bottom: 0;  
+  justify-content: right;
 }
 .tex {
   text-align: right;
   right: 0;
   color: white;
-  float: right;
+
 }
 
 @media (max-width: 768px) {
@@ -156,14 +163,18 @@ body {
   height: 30px;
   float: left;
   }
+  .project-content {
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
   .project-card {
     margin-left: 0.5%;
     text-decoration: none;
     color: inherit;
     width: 400px;
     height: 400px;
-    background: #00bcd4;
-    border-radius: 10px;
+    background: #aeaeae;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente el contenido */
@@ -172,29 +183,39 @@ body {
     transition: transform 0.15s ease-in-out;
     font-size: auto;
     overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
-    padding: 10px;
 }
 
 .project-card img {
-  max-width: 50%; /* Make sure the image doesn't exceed its container's width */
+  max-width: 70%; /* Make sure the image doesn't exceed its container's width */
   height: auto; /* Maintain the aspect ratio */
   display: block;
-  margin-bottom: 1px; 
+ 
 }
 .project-card h3 {
-  margin-top: 1px; /* Add margin above the title */
+
+  margin-top: 0px;
+  margin-left: 15px;
+  
+}
+.project-card p {
+  margin-top: 0px;
+  margin-left: 15px;
+  
 }
   
   .project-card.hovered {
     transform: scale(1.1);
   } 
 p {
-  font: arial;
-  font-size: 30px;
+  font: Noto Sans;
+  font-size: 32px;
   text-align: center;
 }
 .h3 {
   text-align: center;
+}
+.h2{
+  font: Lato;
 }
 
 @keyframes moveLeft {

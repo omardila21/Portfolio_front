@@ -1,9 +1,7 @@
-import  React from "react";
+import React from "react";
 import "../../App.css";
 
-
-
-const ProjectCard = ({ imagen, title, description, url }) => {
+const ProjectCard = ({ imagen, title, tecnology, url }) => {
   const [isHovered, setHovered] = React.useState(false);
 
   return (
@@ -15,16 +13,13 @@ const ProjectCard = ({ imagen, title, description, url }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div>
-        <div className="project-card img">{imagen}</div>
-        <h3>{title}</h3>
-        <h3>{description}</h3>
-        <h4>{url}</h4>
-      </div>
-  
-    </a>
+      
+        <div className="project-card img">{imagen}</div>  
+        <p>{title}</p>
+        <h3>{tecnology}</h3>
+        <h3>{url}</h3>
     
-
+    </a>
   );
 };
 
