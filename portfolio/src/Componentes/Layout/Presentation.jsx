@@ -18,15 +18,14 @@ const MainPresentacion = () =>{
       <section id= "aboutMeSection">
       <h2 style={{ fontSize: '35px', textAlign: 'justify', marginLeft: '3%' }}>About me</h2>
       <p>&nbsp;</p>
-      <p>Hello, let me introduce myself. My name is Omar Ardila, a Geological Engineer graduated from the University of the Andes in Venezuela.</p>
-      <p>Since the pandemic, I ventured into the IT field, acquiring knowledge of various programming languages.</p>
+      <p>Hello, let me introduce myself. My name is Omar Ardila, a Geological Engineer graduated from the University of the Andes in Venezuela. Since the pandemic, I ventured into the IT field, acquiring knowledge of various programming languages.</p>
       <p> I possess great adaptability to different languages and frameworks. I hope to be of interest to you and discuss any job opportunities.</p>
-      <p> The technologies I feel comfortable working with are as follows:</p>
+      <p style={{textAlign: 'center'}}> The technologies I feel comfortable working with are as follows:</p>
       <p>&nbsp;</p>
       <div style={{ display: "flex", flexDirection: 'column', alignItems: 'center' }}>
         <p style={{ marginBottom: '30px' }}></p>
         <div style={{ overflow: 'hidden', width: '60%', position: 'relative' }}>
-            <table style={{ width: '100%', animation: 'moveLeft 60s linear infinite',}}>
+            <table style={{ width: '85%', animation: 'moveLeft 15s linear infinite',}}>
               <thead>
                 <tr>
                   <th style={{ position: 'relative', width: '100px' }}>

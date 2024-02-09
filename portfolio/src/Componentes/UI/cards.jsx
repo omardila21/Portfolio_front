@@ -17,7 +17,7 @@ const ProjectCard = ({ imagen, title, tecnology, url }) => {
         <div className="project-card img">{imagen}</div>  
         <p>{title}</p>
         <h3>{tecnology}</h3>
-        <h3>{url}</h3>
+        <h4>{url}</h4>
     
     </a>
   );

@@ -30,24 +30,22 @@ const NavigationMenu = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <ul className="navbar-nav" style={{ display: 'flex', flexDirection: 'row', listStyleType: 'none', margin: 2.5, padding: 0 }}>
+    <nav className="navbar">
+      <ul className="navbar-nav" >
         <ScrollLink
           to="aboutMeSection"
           spy={true}
           smooth={true}
           offset={-50}
-          duration={200}
-        >
-          About me
-        </ScrollLink>
+          duration={500}
+        >About me</ScrollLink>
         <div style={{width: '10px'}}></div>
         <ScrollLink
           to="projectSection"
           spy={true}
           smooth={true}
           offset={-50}
-          duration={200}
+          duration={500}
         >
           Projects
         </ScrollLink>
