@@ -3,8 +3,8 @@ import ProjectCard from '../UI/cards';
 import "../../App.css";
 import topImage from '../../Pictures/trr7.png'
 import cocoImage  from'../../Pictures/cocode.png'
-
-
+import logImage  from'../../Pictures/logistics.png'
+import APImage  from'../../Pictures/API.png'
 
 const projects = [
   {
@@ -14,22 +14,22 @@ const projects = [
     url:'https://top-rated-reviews.netlify.app/'
   },
   {
-    imagen: <img src={cocoImage} alt="cocode"></img>,
-    title: 'Cocode',
-    tecnology:'',
-    url:'https://c15-30-ft-java-react-frontcocode.vercel.app/'
-  },
-  {
-    imagen: <img src={topImage} alt="TopRated"></img>,
-    title: 'Top Rated Reviews',
+    imagen: <img src={logImage} alt="Logistics"></img>,
+    title: 'Logistics Codo a Codo',
     tecnology: 'Page created with JavaScript for academic purposes with the intention of being a movie listings consultation portal.',
-    url:'https://top-rated-reviews.netlify.app/'
+    url:'https://github.com/VirginiaCABA/PIG_Grupo5'
   }, 
   {
-    imagen: <img src={topImage} alt="TopRated"></img>,
-    title: 'Top Rated Reviews',
+    imagen: <img src={cocoImage} alt="Cocode"></img>,
+    title: 'Cocode',
     tecnology: 'Page created with JavaScript for academic purposes with the intention of being a movie listings consultation portal.',
-    url:'https://top-rated-reviews.netlify.app/'
+    url:'https://c15-30-ft-java-react-frontcocode.vercel.app/'
+  }, 
+  {
+    imagen: <img src={APImage} alt="API"></img>,
+    title: 'API GET/POST',
+    tecnology: 'Page created with JavaScript for academic purposes with the intention of being a movie listings consultation portal.',
+    url:'https://github.com/omardila21/API.git'
   },
  
 ];

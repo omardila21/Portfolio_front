@@ -18,8 +18,7 @@ body {
 }
 
 .App-header {
-  background-image: url('C:\Users\Home1\OneDrive\Escritorio\Omar\Programación\portfolio\front\Portfolio_front\portfolio\src\Pictures\Omar-logos_white.png');
-  background-color: #414142;
+  background-color: #f6f6fb;
   min-height: 1vh;
   width: 100%; /* Cambiado de 130% a 100% */
   height: 45vh;
@@ -213,16 +212,13 @@ p {
 .h3 {
   text-align: center;
 }
-.h2{
-  font: Lato;
-}
 
 @keyframes moveLeft {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-95%);
+    transform: translateX(-50%);
   }
 }
 @media (max-width: 354px) {
